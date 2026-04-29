@@ -92,6 +92,7 @@ a{
   background:none;
   font-size:30px;
   cursor:pointer;
+  color:var(--red);
 }
 
 /* HERO */
