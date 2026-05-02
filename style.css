@@ -549,4 +549,9 @@ grid-template-columns: 1fr !important;
 .mobile-only {
 display: block;
 }
+
+.feature-card {
+    border-left-color: var(--blue);
+  }
+  
 }
