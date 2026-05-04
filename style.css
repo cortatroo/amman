@@ -687,5 +687,6 @@ display: block;
     height: 36px;
     min-width: 36px;
     font-size: 15px;
+    display: none;
   }
 }
