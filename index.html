@@ -418,124 +418,18 @@
   </div>
 </footer>
 
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/55SEUNUMERO" class="whatsapp" target="_blank" aria-label="Falar no WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<script type="module">
+  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
 
-<script src="script.js"></script>
-<!-- BOTÃO PERSONALIZADO -->
-<div id="chat-suporte">
-  <div class="chat-content">
-    <div class="chat-icon">💬</div>
-
-    <div class="chat-text">
-      <strong>Precisa de ajuda?</strong>
-      <span>Fale agora com nosso suporte</span>
-    </div>
-  </div>
-</div>
-
-<style>
-  #chat-suporte{
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 9999;
-    background: linear-gradient(135deg,#2563eb,#1d4ed8);
-    color: white;
-    padding: 14px 18px;
-    border-radius: 16px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    transition: 0.3s ease;
-    font-family: Arial, sans-serif;
-    animation: pulse 2s infinite;
-  }
-
-  #chat-suporte:hover{
-    transform: translateY(-3px) scale(1.02);
-  }
-
-  .chat-content{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-
-  .chat-icon{
-    font-size:26px;
-  }
-
-  .chat-text{
-    display:flex;
-    flex-direction:column;
-  }
-
-  .chat-text strong{
-    font-size:15px;
-  }
-
-  .chat-text span{
-    font-size:13px;
-    opacity:0.9;
-  }
-
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(37,99,235,.5);}
-    70%{box-shadow:0 0 0 12px rgba(37,99,235,0);}
-    100%{box-shadow:0 0 0 0 rgba(37,99,235,0);}
-  }
-
-  @media(max-width:768px){
-    #chat-suporte{
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-    }
-  }
-</style>
-
-<script>
-  window.chatwootSettings = {
-    position: "left",
-    type: "standard",
-    launcherTitle: "",
-    hideMessageBubble: true
-  };
-
-  (function(d,t) {
-    var BASE_URL="https://nchatz.duckdns.org";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.async = true;
-
-    s.parentNode.insertBefore(g,s);
-
-    g.onload=function(){
-
-      window.chatwootSDK.run({
-        websiteToken: '4Gm12GkPyWzbQ9aVM9BYCf5s',
-        baseUrl: BASE_URL
-      });
-
-      // ABRIR CHAT AO CLICAR
-      document
-        .getElementById("chat-suporte")
-        .addEventListener("click", function(){
-
-          window.$chatwoot.toggle("open");
-
-        });
-    }
-
-  })(document,"script");
+  Typebot.initBubble({
+    typebot: "faq-gtjmu60",
+    apiHost: "https://typevchat.duckdns.org",
+    theme: {
+      button: { backgroundColor: "#0042DA", size: "large" },
+      chatWindow: { backgroundColor: "#F8F8F8" },
+    },
+  });
 </script>
-<iframe
-  title="Typebot"
-  src="https://typevchat.duckdns.org/faq-gtjmu60"
-  style="border: none; width: 100%; height: 600px"
-></iframe>
+
 </body>
 </html>
